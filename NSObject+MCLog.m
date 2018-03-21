@@ -10,7 +10,7 @@
 #import <objc/runtime.h>
 
 //NSObject
-@implementation NSObject (MCLog)
+@implementation NSObject (Log)
 
 - (void)mc_log {
     NSLog(@"printPropertList:%@",[self printPropertList]);
@@ -22,7 +22,6 @@
 - (void)mc_log_method {
     NSLog(@"MC_LOG_METHOD:%@",[self printMethodList]);
 }
-
 - (NSDictionary *)printPropertList {
     NSMutableDictionary *props = [NSMutableDictionary dictionary];
     unsigned int outCount, i;
@@ -42,7 +41,7 @@
 }
 - (NSArray *)printMethodList {
     NSMutableArray * list = [NSMutableArray array];
-    unsigned int mothCout_f =0;
+    unsigned int mothCout_f = 0;
     Method* mothList_f = class_copyMethodList([self class],&mothCout_f);
     for(int i=0;i<mothCout_f;i++) {
         Method temp_f = mothList_f[i];
@@ -59,35 +58,35 @@
 }
 @end
 //NSArray
-@implementation NSArray (MCLog)
+@implementation NSArray (Log)
 
-- (NSString *)descriptionWithLocale:(id)locale
+- (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level
 {
     NSMutableString *strM = [NSMutableString stringWithString:@"(\n"];
-    
+
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         [strM appendFormat:@"\t%@,\n", obj];
     }];
-    
+
     [strM appendString:@")"];
-    
+
     return strM;
 }
 
 @end
 //NSDictionary
-@implementation NSDictionary (MCLog)
+@implementation NSDictionary (Log)
 
-- (NSString *)descriptionWithLocale:(id)locale
+- (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level
 {
     NSMutableString *strM = [NSMutableString stringWithString:@"{\n"];
-    
+
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         [strM appendFormat:@"\t%@ = %@;\n", key, obj];
     }];
-    
+
     [strM appendString:@"}\n"];
-    
+
     return strM;
 }
 

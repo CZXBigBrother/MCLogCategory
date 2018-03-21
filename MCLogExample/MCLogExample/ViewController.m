@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "TestLogModel.h"
+#import "NSObject+MCLog.h"
 
 @interface ViewController ()
 
@@ -17,6 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSArray * arr = @[@"你好",@"世界"];
+    NSLog(@"%@",arr);
+    
+    NSDictionary * dict = @{@"你好":@"世界"};
+    NSLog(@"%@",dict);
+    
+    TestLogModel * data = [[TestLogModel alloc]init];
+    data.name = @"张三";
+    data.sex = YES;
+    data.address = @"火星大道222号";
+    NSLog(@"%@",data);
+    NSLog(@"%@",[data printPropertList]);
+    NSLog(@"%@",[data printMethodList]);
 }
 
 
@@ -27,3 +42,4 @@
 
 
 @end
+

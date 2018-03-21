@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		417FE18B20610F5400725208 /* TestLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 417FE18A20610F5400725208 /* TestLogModel.m */; };
 		41BCA3CD20610C2A00598BE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BCA3CC20610C2A00598BE8 /* AppDelegate.m */; };
 		41BCA3D020610C2A00598BE8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BCA3CF20610C2A00598BE8 /* ViewController.m */; };
 		41BCA3D320610C2A00598BE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BCA3D120610C2A00598BE8 /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		417FE18920610F5400725208 /* TestLogModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLogModel.h; sourceTree = "<group>"; };
+		417FE18A20610F5400725208 /* TestLogModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLogModel.m; sourceTree = "<group>"; };
 		41BCA3C820610C2A00598BE8 /* MCLogExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCLogExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BCA3CB20610C2A00598BE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		41BCA3CC20610C2A00598BE8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				41BCA3D620610C2A00598BE8 /* LaunchScreen.storyboard */,
 				41BCA3D920610C2A00598BE8 /* Info.plist */,
 				41BCA3DA20610C2A00598BE8 /* main.m */,
+				417FE18920610F5400725208 /* TestLogModel.h */,
+				417FE18A20610F5400725208 /* TestLogModel.m */,
 			);
 			path = MCLogExample;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 			files = (
 				41BCA40020610C5B00598BE8 /* NSObject+MCLog.m in Sources */,
 				41BCA3D020610C2A00598BE8 /* ViewController.m in Sources */,
+				417FE18B20610F5400725208 /* TestLogModel.m in Sources */,
 				41BCA3DB20610C2A00598BE8 /* main.m in Sources */,
 				41BCA3CD20610C2A00598BE8 /* AppDelegate.m in Sources */,
 			);

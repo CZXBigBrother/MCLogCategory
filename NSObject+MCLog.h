@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (MCLog)
-
+- (NSDictionary *)printPropertList;
+- (NSArray *)printMethodList;
 @end
 
 
